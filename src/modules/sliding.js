@@ -2,7 +2,9 @@ const
 slider = document.querySelector('.main-slider'),
 slide = slider.querySelectorAll('.slide'),
 servSlider = document.querySelector('.services-slider'),
-servSlide = servSlider.querySelectorAll('.slide');
+servSlide = servSlider.querySelectorAll('.slide'),
+gallerySlider = document.querySelector('.gallery-slider'),
+gallerySlide = gallerySlider.querySelectorAll('.slide');
 
 function sliding(){
 
@@ -25,7 +27,7 @@ function sliding(){
             nextSlide(slide, currentSlide);
         };
 
-        const startSlide = (time = 2000) => {
+        const startSlide = (time = 3000) => {
             interval = setInterval(autoPlaySlide, time);
         };
         startSlide();
@@ -40,27 +42,56 @@ function sliding(){
             }
         });
 
-        let firstSlide = 0;
-        let lastSlide = 4;
-        let interval;
+
+        let first = 0;
+        let last = 4;
+
+        const playSlide = () => {
+            servSlide.forEach((element, key) => {
+                if(key>=first&&key<=last){
+                    element.style.display = 'block';
+                }else if(key<first||key>last){
+                    element.style.display = 'none';
+                }
+            });
+            first++;
+            last++;
+            if(first>4){
+                first = 0;
+                last = 4;
+            }            
+
+        }
         const autoPlaySlide = () => {
-            prevSlide(servSlide, firstSlide);
-            firstSlide++;
-
-            if (lastSlide >= servSlide.length){
-                firstSlide = 0;
-                lastSlide = 4;
-            }
-            nextSlide(servSlide, lastSlide);
-        };
-
-        const startSlide = (time = 2000) => {
-            interval = setInterval(autoPlaySlide, time);
-        };
-        startSlide();
-
+            setInterval(playSlide, 2100);
+        }
+        autoPlaySlide();
     }
     serviceSlide();
+
+
+    const galSlide = () => {
+        gallerySlide.forEach((elem, key)=>{
+            if(key >= 1){
+                elem.style.display = 'none';
+            }
+        });
+        let currentGalSlide = 0;
+        let interval;
+        const autoPlayGalSlide = () => {
+            prevSlide(gallerySlide, currentGalSlide);
+            currentGalSlide++;
+            if (currentGalSlide >= gallerySlide.length)currentGalSlide = 0;
+            nextSlide(gallerySlide, currentGalSlide);
+        };
+
+        const startGalSlide = (time = 1900) => {
+            interval = setInterval(autoPlayGalSlide, time);
+        };
+        startGalSlide();
+
+    }
+    galSlide();
 }
 
 sliding();

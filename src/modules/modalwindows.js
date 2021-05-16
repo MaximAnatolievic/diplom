@@ -4,7 +4,8 @@ function modalwindows(){
         freeVisit = document.getElementById('free_visit_form'),
         callBack = document.getElementById('callback_form'),
         gift = document.getElementById('gift'),
-        ulList = clubsList.querySelector('ul');
+        ulList = clubsList.querySelector('ul'),
+        liList = ulList.querySelectorAll('li');
     let showed = false;
     document.addEventListener('click', (event)=>{
         const target = event.target;
@@ -12,7 +13,7 @@ function modalwindows(){
         if(target.closest('.clubs-list')&&!showed){
             ulList.style.display = 'block';
                 showed = true;        
-        }else if(showed){
+        }else if(target != liList[0]&&target != liList[1]&& target != ulList){
             ulList.style.display = 'none';
             showed = false;  
         }
