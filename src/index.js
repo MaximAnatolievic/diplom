@@ -3,6 +3,7 @@
 import modalwindows from './modules/modalwindows';
 import sliding from './modules/sliding';
 import scrolling from './modules/scrolling';
+import calc from './modules/calc';
 
 //Слайдеры
 sliding();
@@ -10,6 +11,8 @@ sliding();
 //всплытие модальных окон
 modalwindows();
 
-//всплытие модальных окон
+//скроллинг
 scrolling();
 
+//калькулятор
+calc();
