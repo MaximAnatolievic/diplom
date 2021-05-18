@@ -10,7 +10,7 @@ function modalwindows(){
     document.addEventListener('click', (event)=>{
         const target = event.target;
         console.log(target);
-        console.error(window.pageYOffset);
+        
 
         if(target.closest('.clubs-list')&&!showed){
             ulList.style.display = 'block';

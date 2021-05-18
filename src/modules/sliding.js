@@ -142,8 +142,10 @@ function sliding(){
         gallerySlide.forEach((elem, key)=>{
             dot[key] = document.createElement('li');
             dot[key].classList = 'slick';
+            dot[key].style.cssText = 'opacity: 1;';
             btn[key] = document.createElement('button');
             btn[key].classList = 'dot';
+            btn[key].style.cssText = 'opacity: 1;';
             dot[key].appendChild(btn[key]);
             if(key === 0){
                 dot[key].classList.add('slick-active');

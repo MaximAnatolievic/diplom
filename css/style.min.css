@@ -1108,6 +1108,7 @@ header .head .call .btn {
 }
 
 header nav.top-menu {
+    position: relative;
     z-index: 4444;
     top: 0;
     left: 0;
@@ -1124,7 +1125,7 @@ header nav.top-menu .menu-button {
 
 header nav.top-menu .menu-button img {
     max-width: 40px;
-    position: relative;
+    
     margin-top: 10px;
     margin-bottom: 10px;
     -webkit-transition: all 0.3s;
@@ -1385,15 +1386,19 @@ nav.popup-menu .close-menu-btn img {
     bottom: 50px;
     left: 50%;
     margin-left: -65px;
-    z-index: 5;
+    z-index: 1000;
     vertical-align: top;
+    border: none;
+    overflow: hidden;
 }
 
 .slider-dots li {
+
     float: left
 }
 
 .slider-dots li button {
+
     width: 22px;
     height: 4px;
     background-color: #fff;
@@ -1404,6 +1409,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 .slider-dots li.slick-active button {
+
     background-color: #ffd11a
 }
 
@@ -2496,7 +2502,7 @@ p.personal-data input[type=checkbox]:checked+label:before {
     }
 
     #gallery .gallery-slider .slider-dots {
-        background-color: rgba(79, 25, 52, .5);
+
         padding-top: 12px;
         padding-left: 5px;
         padding-right: 5px
