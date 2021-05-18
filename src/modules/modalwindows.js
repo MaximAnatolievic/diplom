@@ -10,6 +10,8 @@ function modalwindows(){
     document.addEventListener('click', (event)=>{
         const target = event.target;
         console.log(target);
+        console.error(window.pageYOffset);
+
         if(target.closest('.clubs-list')&&!showed){
             ulList.style.display = 'block';
                 showed = true;        
@@ -36,7 +38,11 @@ function modalwindows(){
         }else if(target.closest('.close-form')||target.closest('.overlay')||target.matches('.close-btn')){
             gift.style.display = 'none';
         }
-
+        if(target.matches('[src="images/menu-button.png"]')){
+            document.querySelector('.popup-menu').style.display = 'flex';
+        }else if(target.matches('[src="images/delete.png"]')||target.matches('a')){
+            document.querySelector('.popup-menu').style.display = 'none';
+        }
 
     });
 }
