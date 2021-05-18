@@ -37,7 +37,7 @@ function modalwindows(){
             gift.style.display = 'none';
         }
 
+
     });
 }
-modalwindows();
 export default modalwindows;

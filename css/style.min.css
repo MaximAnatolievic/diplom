@@ -1385,7 +1385,8 @@ nav.popup-menu .close-menu-btn img {
     bottom: 50px;
     left: 50%;
     margin-left: -65px;
-    z-index: 1000
+    z-index: 5;
+    vertical-align: top;
 }
 
 .slider-dots li {
@@ -1536,6 +1537,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 .services-slider {
+    position: relative;
     display: flex;
     margin: 0 auto;
     padding-left: 15px;
@@ -1579,7 +1581,19 @@ nav.popup-menu .close-menu-btn img {
     cursor: pointer
 }
 
-.services-slider .slider-arrow span {
+.services-slider .slider-arrow.prev span {
+    background: url(../images/arrow-left.png) center no-repeat;
+    display: block;
+    width: 36px;
+    height: 37px;
+    background-color: #f4c71b;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 11px
+}
+
+.services-slider .slider-arrow.next span {
+    background: url(../images/arrow-right.png) center no-repeat;
     display: block;
     width: 36px;
     height: 37px;
@@ -1606,6 +1620,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider {
+    position: relative;
     padding-left: 75px;
     padding-right: 75px;
     max-width: 900px;
@@ -1626,7 +1641,19 @@ nav.popup-menu .close-menu-btn img {
     cursor: pointer
 }
 
-#gallery .gallery-slider .slider-arrow span {
+#gallery .gallery-slider .slider-arrow.prev span {
+    background: url(../images/arrow-left.png) center no-repeat;
+    display: block;
+    width: 36px;
+    height: 37px;
+    background-color: #f4c71b;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 11px
+}
+
+#gallery .gallery-slider .slider-arrow.next span {
+    background: url(../images/arrow-right.png) center no-repeat;
     display: block;
     width: 36px;
     height: 37px;
@@ -1637,6 +1664,7 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider .slider-arrow.prev {
+    
     left: 0
 }
 
