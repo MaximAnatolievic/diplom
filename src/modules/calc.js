@@ -19,24 +19,22 @@ priceTotal = document.getElementById('price-total');
 
 function calc(){
     let price;
-    document.getElementById('cards').addEventListener('input', (event)=>{
+    document.getElementById('cards').addEventListener('input', ()=>{
         if(mozaikaCheck.checked){
             time.forEach((elem)=>{
                 if(elem.checked)price=mozaikaPrice[elem.value];
-            })
+            });
         }else if(schelkovoCheck.checked){
             time.forEach((elem)=>{
                 if(elem.checked)price=schelkovoPrice[elem.value];
-            })
-        }
+            });
+        };
         let promo = document.getElementById('cards').querySelector('[placeholder="Промокод"]');
         if(promo.value.toUpperCase()==='ТЕЛО2019'){
             price *= 0.7;
-        }
-
-  
+        };  
         priceTotal.textContent = price;
-    })
+    });
 
 }
 export default calc;

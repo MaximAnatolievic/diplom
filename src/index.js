@@ -4,6 +4,7 @@ import modalwindows from './modules/modalwindows';
 import sliding from './modules/sliding';
 import scrolling from './modules/scrolling';
 import calc from './modules/calc';
+import validat from './modules/validat';
 
 //Слайдеры
 sliding();
@@ -16,3 +17,6 @@ scrolling();
 
 //калькулятор
 calc();
+
+//Валидация форм
+validat();
