@@ -5,7 +5,8 @@ const validat = () => {
         if (target.matches(`[placeholder="Ваше имя..."]`)) {
             target.value = target.value.replace(/[^ А-яа-я]/, '');
         } else if (target.matches('[placeholder="Ваш номер телефона..."]')) {
-            target.value = target.value.replace(/[^\d\+]{11, 12}/g, '');
+            target.value = target.value.replace(/[^\d\+]/g, '');
+		    target.value = target.value.replace(/([0-9]{11})(.)/g, (match, val1, val2) => (match = val1));
         }
     });
 
