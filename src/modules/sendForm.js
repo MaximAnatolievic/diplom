@@ -29,7 +29,8 @@ const sendForm = () =>{
             if(check){
                 if(!check.checked){
                     alert('Необходимо подтвердить согласие на обработку персональных данных');
-                    throw new Error('personal data not accepted');
+                    return;
+                
                 }
             }
             const club = item.querySelectorAll('[name="club-name"]');
@@ -42,7 +43,7 @@ const sendForm = () =>{
                 
                 if(!clubChk){
                     alert('Необходимо выбрать клуб');
-                    throw new Error('club was not choosen');
+                    return;
                 };
             };
             
@@ -71,8 +72,8 @@ const sendForm = () =>{
                     setTimeout(()=>{
                         thanks.style.display = 'none';
                     }, 2000);
-                    
-                    throw new Error('Network status is not 200');
+                    return;
+                    //throw new Error('Network status is not 200');
                 };
 
                 message.textContent = sucsessMessage;
@@ -99,9 +100,11 @@ const sendForm = () =>{
                 setTimeout(()=>{
                   thanks.style.display = 'none';
                 }, 2000);
-                console.error(error)});
+                //console.error(error)
+            });
         });
     });
 
 }
+
 export default sendForm;
