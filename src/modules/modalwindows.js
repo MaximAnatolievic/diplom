@@ -10,7 +10,7 @@ function modalwindows(){
     let showed = false;
     document.addEventListener('click', (event)=>{
         const target = event.target;
-        console.log(target);
+        //console.log(target);
         
 
         if(target.closest('.clubs-list')&&!showed){
