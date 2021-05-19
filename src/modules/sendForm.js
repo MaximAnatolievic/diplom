@@ -17,6 +17,9 @@ const sendForm = () =>{
         document.querySelectorAll('[placeholder="Ваш номер телефона..."]').forEach(item => {
             item.value = '';
         }); 
+        document.querySelectorAll('[type="checkbox"]').forEach(item => {
+            item.checked = false;
+        }); 
     }
 
     forms.forEach(item => {
