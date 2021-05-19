@@ -89,6 +89,12 @@ const sendForm = () =>{
             postData(body)
             .then(applySend)
             .catch((error) => {
+                message.textContent = errorMessage;
+                thanks.style.display = 'block';
+                                                        
+                setTimeout(()=>{
+                  thanks.style.display = 'none';
+                }, 2000);
                 console.error(error)});
         });
     });
