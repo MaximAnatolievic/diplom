@@ -26,9 +26,11 @@ const sendForm = () =>{
         item.addEventListener('submit', event => {
             event.preventDefault();
             const check = item.querySelector('[type="checkbox"]');
-            if(!check.checked){
-                alert('Необходимо подтвердить согласие на обработку персональных данных');
-                throw new Error('personal data not accepted');
+            if(check){
+                if(!check.checked){
+                    alert('Необходимо подтвердить согласие на обработку персональных данных');
+                    throw new Error('personal data not accepted');
+                }
             }
             const formData = new FormData(item);
             const body = {};
