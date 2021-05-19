@@ -14,7 +14,6 @@ schelkovoPrice = {
 time = document.querySelectorAll('.time>input'),
 mozaikaCheck = document.getElementById('card_leto_mozaika'),
 schelkovoCheck = document.getElementById('card_leto_schelkovo'),
-cardCheck = document.getElementById('card_check'),
 priceTotal = document.getElementById('price-total');
 
 function calc(){
@@ -33,7 +32,7 @@ function calc(){
         if(promo.value.toUpperCase()==='ТЕЛО2019'){
             price *= 0.7;
         };  
-        priceTotal.textContent = price;
+        priceTotal.textContent = Math.ceil(price);
     });
 
 }

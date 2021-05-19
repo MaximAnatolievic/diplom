@@ -4,6 +4,7 @@ function modalwindows(){
         freeVisit = document.getElementById('free_visit_form'),
         callBack = document.getElementById('callback_form'),
         gift = document.getElementById('gift'),
+        thanks = document.getElementById('thanks'),
         ulList = clubsList.querySelector('ul'),
         liList = ulList.querySelectorAll('li');
     let showed = false;
@@ -29,7 +30,7 @@ function modalwindows(){
         if(target.closest('.callback-btn')){
             callBack.style.display = 'block';
         }else if(target.closest('.close-form')||target.closest('.overlay')){
-            callBack.style.display = 'none';
+            callBack.style.display = 'none';            
         }
 
         if(target.closest('.fixed-gift')){
@@ -37,12 +38,15 @@ function modalwindows(){
             gift.style.display = 'block';
         }else if(target.closest('.close-form')||target.closest('.overlay')||target.matches('.close-btn')){
             gift.style.display = 'none';
+            thanks.style.display = 'none';
         }
         if(target.matches('[src="images/menu-button.png"]')){
             document.querySelector('.popup-menu').style.display = 'flex';
         }else if(target.matches('[src="images/delete.png"]')||target.matches('a')){
             document.querySelector('.popup-menu').style.display = 'none';
         }
+
+
 
     });
 }
