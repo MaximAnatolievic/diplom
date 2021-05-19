@@ -136,7 +136,7 @@ function sliding(){
 
     
     const galSlide = () => {
-        console.log(gallerySlide.length);
+        //console.log(gallerySlide.length);
         const dot = [];
         const btn = [];
         gallerySlide.forEach((elem, key)=>{
