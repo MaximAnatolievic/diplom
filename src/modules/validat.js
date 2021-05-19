@@ -27,7 +27,7 @@ const validat = () => {
             target.value = target.value.replace(/^...([0-9]{3})/g, (match, val1) => (val1 = `+7 ${val1} `));
             if (target.value.length !== 14 && target.value !== '') {
                 target.value = '';
-                alert('Проверьте номер');
+                alert('Введите номер в формате 7хххххххххх');
             }
 
         }}, true);
