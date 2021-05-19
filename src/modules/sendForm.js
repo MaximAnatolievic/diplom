@@ -34,7 +34,7 @@ const sendForm = () =>{
             }
             const club = item.querySelectorAll('[name="club-name"]');
             let clubChk = true;
-            if (club){
+            if (club.length>1){
                 clubChk = false;
                 club.forEach((item)=>{
                     if(item.checked)clubChk=true;
