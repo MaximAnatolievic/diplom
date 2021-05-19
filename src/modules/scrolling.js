@@ -15,8 +15,8 @@ function scrolling(){
         }
         if(document.documentElement.clientWidth <= 768){
             
-            console.log(pos);
-            console.log(top);
+            //console.log(pos);
+            //console.log(top);
             if(top < pos){
                 menu.style.cssText = `position: fixed`;
                 menu.style.top = pos;
