@@ -32,6 +32,19 @@ const sendForm = () =>{
                     throw new Error('personal data not accepted');
                 }
             }
+            const club = item.querySelectorAll('[name="club-name"]');
+            let clubChk = false;
+            if (club){
+                club.forEach((item)=>{
+                    if(item.checked)clubChk=true;
+                });
+                
+                if(!clubChk){
+                    alert('Необходимо выбрать клуб');
+                    throw new Error('club was not choosen');
+                };
+            };
+            
             const formData = new FormData(item);
             const body = {};
             formData.forEach((val, key) => {
