@@ -51,6 +51,9 @@ const sendForm = () =>{
             formData.forEach((val, key) => {
                 body[key] = val;
             });
+            if(item.querySelector('#price-total')){
+                body.price = item.querySelector('#price-total').textContent;
+            }
 
             if(item.id ==='form1' || item.id ==='form2' ){
                 item.parentElement.parentElement.parentElement.style.display = 'none';
